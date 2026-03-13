@@ -5,7 +5,7 @@ O **Deck ArkComp** é um projeto pessoal que nasceu como um desafio para a disci
 ---
 
 ## Preview
-![Preview do site](/media/img/preview.png)
+![Preview do site](/media/img/mimiomias-machine-preview.gif)
 
 ---
 
