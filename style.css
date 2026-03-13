@@ -1,0 +1,207 @@
+@font-face {
+    font-family: 'GothicPixels'; 
+    src: url('media/fonts/GothicPixels.ttf') format('truetype'); 
+}
+
+@font-face {
+    font-family: 'PixelCursivo'; 
+    src: url('media/fonts/miserabledolly_CurlyQ.ttf') format('truetype'); 
+}
+
+@font-face {
+    font-family: 'HandPixel'; 
+    src: url('media/fonts/miserabledolly_round.ttf') format('truetype'); 
+}
+
+body{
+    background-image: url('media/img/bg.gif');
+    
+}
+
+/* Efeito CRT */
+.crt::before {
+  content: " ";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  background-size: 100% 2px, 3px 100%;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+/* Container principal do site */
+.container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    width: 80%;
+    max-width: 1200px; 
+    margin: 0 auto;
+    gap: 20px; 
+    padding: 20px;
+}
+
+/* Header */
+header {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+.logo {
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+}
+
+#logo-texto{
+    font-family: 'PixelCursivo', sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    color: #c0c0c0;
+    margin-top: -80px;
+    margin-bottom: 0;
+    text-shadow: -2px -2px 0 #000,  
+                  2px -2px 0 #000,
+                 -2px  2px 0 #000,
+                  2px  2px 0 #000;
+}
+
+nav {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+}
+
+#fundo-navbar {
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+    gap: 10px; 
+    flex-wrap: wrap; 
+}
+
+
+/*Div q contém o main e o sidebar */
+/* Div que contém o main e o sidebar */
+.corpo-site {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Barra lateral */
+
+#left-column {
+    flex: 1;
+    display: flex;
+}
+
+#fundo-sidebar {
+    width: 100%; 
+    height: 98%;
+    display: flex;
+    flex-direction: column;
+}
+
+#img-side-bar {
+    display: flex;
+    justify-content: center;
+}
+
+#img-side-bar img {
+    height: 150px;
+    margin: 20px;
+}
+
+.info-disciplina {
+    margin-bottom: 20px;   
+}
+
+.aside-img {
+    display: flex;
+    justify-content: center; 
+    margin-top: 20px; 
+}
+
+
+.aside-img img {
+    max-width: 90%; 
+    height: 200px; 
+    border: 2px solid #808080;
+}
+
+
+
+#fundo-main{
+    width: 100%; 
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.holder {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.foto-destaque{
+    display: flex;
+    justify-content: center;
+}
+
+.foto-destaque img{
+    height: 230px;
+}
+
+.sobre-site {
+    font-family: 'HandPixel', sans-serif;
+    font-size: 14px;
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+#machine {
+    margin: 15px;
+}
+
+/*Pega a div que os inputs estão dentro (div mãe) pela classe */
+.inputs {
+    display: flex;
+    justify-content: center; /* Centraliza na horizontal */
+    gap: 15px; /* Espacinho entre um e outro */
+    flex-wrap: wrap; /* Quebra a linha se não couber td */
+    margin-top: 20px; /* Espaço da frase de cima */
+    align-items: flex-end;
+}
+
+/* Inputs e labels do conversor */
+.field-row-stacked{
+    width: 120px;
+}
+
+/* Chama a div mãe dos botões */
+.botoes {
+    display: flex;
+    justify-content: center;
+    margin: 20px; 
+    gap: 15px;
+}
+
+
+
+

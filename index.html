@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/98.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Deck ArkComp</title>
+</head>
+
+<body>
+    <!-- Pra colocar o CRT na página toda, acima dos outros conteúdos -->
+    <div class="crt"></div>
+
+    <!-- A classe container pra não deixar o conteúdo do site sair da tela e realmente conter -->
+    <div class="container">
+        <!-- TAG semântica <header> pro cabeçalho do site -->
+        <header>
+            <div class="logo">
+                <img src="media/img/lain.gif" alt="">
+                <h1 id="logo-texto">༻ Deck ArkComp ༺</h1>
+            </div>
+            <nav class="navbar">
+                <div class="status-field-border" id="fundo-navbar" style="padding: 5px">
+                    <button>Ver no Github</button>
+                    <button><a href="https://sptech.school" target="_blank">Conheça a SPTech</a></button>
+                    <button>Clique em botões</button>
+                    <button>Ainda em construção</button>
+                    <button>Construtora de botões</button>
+                </div>
+            </nav>
+        </header>
+
+        <div class="corpo-site">
+            <!-- Barra lateral -->
+            <aside id="left-column">
+                <div class="field-border-disabled" id="fundo-sidebar" style="padding: 8px">
+                    <div id="img-side-bar">
+                        <img src="media/img/lain2.gif" alt="Gif Lain">
+                    </div>
+
+                    <div class="info-disciplina">
+                        <div class="window">
+                            <div class="title-bar inactive">
+                                <div class="title-bar-text">Sobre</div>
+                            </div>
+                            <div class="window-body" id="desc-sobre">
+                                <p>A disciplina de Arquitetura Computacional envolve:</p>
+                                <ul>
+                                    <li><strong>Hardware:</strong> a parte que você pode chutar</li>
+                                    <li><strong>Software:</strong> a parte que você pode xingar</li>
+                                    <li><strong>Amor</strong> (ou Síndrome de Estocolmo, ainda não decidi)</li>
+                                </ul>
+                            </div>
+
+                            <div class="status-bar">
+                                <p class="status-bar-field">Turma: <br> 1CCOA</p>
+                                <p class="status-bar-field">Professor: <br> Matheus Matos</p>
+                                <p class="status-bar-field">Uso da CPU: <br> 99%</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="creditos">
+                        <ul class="tree-view">
+                            <li><strong>Fontes</strong></li>
+
+                            <li>
+                                <details open>
+                                    <summary>Design</summary>
+                                    <ul>
+                                        <li><a href="https://jdan.github.io/98.css/" target="_blank">98.css</a></li>
+                                        <li><a href="https://aleclownes.com/2017/02/01/crt-display.html"
+                                                target="_blank">Filtro CRT</a></li>
+                                        <li><a href="https://miserabledolly.net/materials" target="_blank">Fontes:
+                                                GothicPixels e MiserableDolly</a></li>
+                                    </ul>
+                                </details>
+                            </li>
+
+                            <li>
+                                <details>
+                                    <summary>Mídia</summary>
+                                    <ul>
+                                        <li><a href="https://gifcities.org/" target="_blank">Gifs de Lain</a></li>
+                                        <li><a href="https://www.dithergarden.com/" target="_blank">Dither Garden</a>
+                                        </li>
+                                        <li><a href="https://sadgrl.online" target="_blank">Background</a></li>
+                                    </ul>
+                                </details>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="aside-img">
+                        <img src="media/img/ilovemycomputer.jpg" alt="Mulher se transformando num computador">
+                    </div>
+                </div>
+
+            </aside>
+
+            <!-- Conteúdo principal do site -->
+            <main class="holder">
+                <div class="field-border-disabled" id="fundo-main" style="padding: 8px">
+
+                    <div class="foto-destaque">
+                        <img src="media/img/dithered-lain.png" alt="dithered-lain">
+                    </div>
+
+                    <div class="sobre-site">
+                        <p><strong>Deck ArkComp</strong> é o começo de um projeto pessoal para brincar com CSS e
+                            misturar com a matéria de Arquitetura Computacional. <br>
+                            Não, design gráfico is not my passion. <br>
+                            Mas eu gosto de sites pessoais da era Geocities : ) <br> <br>
+                            Esse site usa muitos recursos criados por terceiros como o css de janelas do windows 98 e o
+                            filtro CRT. Mas o código foi adaptado especialmente pra esse projeto e digitado linha por
+                            linha pra praticar e buscar conhecer as tags e suas funcionalidades. SEM IA. <br>
+                            O script foi feito totalmente por mim para cumprir o desafio do conversor de bases. <br>
+                            O código está disponível no Github e comentado, mas fico à disposição pra tirar dúvidas
+                            também. <br>
+                        </p>
+                    </div>
+
+
+                    <div id="machine">
+                        <div class="window">
+                            <div class="title-bar inactive">
+                                <div class="title-bar-text" style="font-size:14px;">mimiomia's Machine</div>
+                                <div class="title-bar-controls">
+                                    <button aria-label="Help"></button>
+                                    <button aria-label="Close"></button>
+                                </div>
+                            </div>
+                            <div class="window-body">
+                                <menu role="tablist">
+                                    <li role="tab" aria-selected="true" style="font-size:14px;"><a href="#tab-oque">O
+                                            que
+                                            é?</a>
+                                    </li>
+                                    <li role="tab" style="font-size:14px;"><a href="#tab-conversor">Conversor de
+                                            bases</a>
+                                    </li>
+                                </menu>
+                                <div class="window" role="tabpanel" id="tab-oque">
+                                    <div class="window-body">
+                                        <p><strong style="font-size: 16px;">O que é a Machine?</strong></p>
+                                        <p style="font-size:14px; margin: 2px;">A machine serve para evitar trabalhos
+                                            manuais para conversão
+                                            de números dem bases <> da base 10. <br>
+                                                O template da SPtechers machine foi desenvolvido por Marise Miranda em
+                                                2017-1 e
+                                                atualizada por Matheus Matos em 2025-1. A mimiomia's machine é uma
+                                                adaptação
+                                                criada por Marcelly Pereira em 2026-1 como desafio proposto pelo
+                                                professor
+                                                Matheus Matos de Arquitetura Computacional. <br>
+                                                A versão conta com um conversor para as bases 2, 8, 10 e 16. Atualizando
+                                                todos
+                                                os campos automaticamente ao clicar no botão "converter". <br>
+                                        </p>
+                                        <p><strong style="font-size: 16px;">Para o futuro:</strong></p>
+                                        <p style="font-size:14px; margin-bottom: 20px;">
+                                            -> Adicionar uma calculadora de operações básicas com as bases. <br>
+                                            -> Adicionar interações nos botões da janela. <br>
+                                            -> Implementar conversão simultânea sem precisar apertar em calcular.
+                                        </p>
+
+                                    </div>
+                                </div>
+
+                                <div class="window" role="tabpanel" id="tab-conversor" hidden>
+                                    <div class="window-body">
+                                        <p style="font-size: 14px;">Digite o número dentro de um campo e clique em
+                                            converter
+                                            pra
+                                            ver a mágia acontecer</p>
+
+                                        <div class="inputs">
+
+                                            <!--Input para base 2-->
+                                            <div class="field-row-stacked" style="width: 120px">
+                                                <label for="ipt_binario"">Binário (Base 2)</label>
+                                            <input id=" ipt_binario" type="text" placeholder="Ex: 1101" />
+                                            </div>
+
+                                            <!--Input para base 8-->
+                                            <div class="field-row-stacked" style="width: 120px">
+                                                <label for="ipt_octal">Octal (Base 8)</label>
+                                                <input id="ipt_octal" type="text" placeholder="Ex: 15" />
+                                            </div>
+
+                                            <!--Input para base 10-->
+                                            <div class="field-row-stacked" style="width: 120px">
+                                                <label for="ipt_decimal">Decimal (Base 10)</label>
+                                                <input id="ipt_decimal" type="text" placeholder="Ex: 13" />
+                                            </div>
+
+                                            <!--Input para base 16-->
+                                            <div class="field-row-stacked" style="width: 120px">
+                                                <label for="ipt_hexadecimal">Hexadecimal (Base 16)</label>
+                                                <input id="ipt_hexadecimal" type="text" placeholder="Ex: D" />
+                                            </div>
+
+                                        </div>
+
+                                        <div class="botoes">
+                                            <div id="btn_converter">
+                                                <button class="default" onclick="converter()" ;">Converter</button>
+                                            </div>
+
+                                            <div id="btn_limpar_inputs">
+                                                <button class="default" onclick="limparInputs()" ;">Limpar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </main>
+        </div>
+
+    </div>
+
+    <script>
+        // -----Lógica das abas da Mimiomia's machine-----
+
+        // Pega todos elementos (botões de aba) que estão como li na tag menu que siga essa regra de ser tablist
+        const abas = document.querySelectorAll('menu[role="tablist"] li');
+
+        // Pega todas as caixas de conteúdo dentro da div que cumpre a regra de ser tabpanel
+        const tabs = document.querySelectorAll('div[role="tabpanel"]');
+
+        // Abre a lista com todas abas e vai executar a função de capturar a aba pra cada uma
+        abas.forEach(function (aba) {
+            // Fica de olho em qualquer interação de clique em cima da aba
+            aba.addEventListener('click', function (troca_aba) {
+
+                // Esconde as caixas de conteudo das tags
+                tabs.forEach(function (tab) {
+                    tab.setAttribute('hidden', 'true');
+                });
+
+                // Tira o estado de selecionado das abas
+                abas.forEach(function (item) {
+                    item.setAttribute('aria-selected', 'false');
+                });
+
+                // Exibe só a aba clicada
+                aba.setAttribute('aria-selected', 'true');
+
+                // Pega o identificador da tag tab (dentro do href)
+                const idTab = aba.querySelector('a').getAttribute('href');
+
+                // Tira o atributo de escondido pra caixa de conteúdo que clicamos
+                document.querySelector(idTab).removeAttribute('hidden');
+            });
+        });
+
+        // -----Lógica da aba de conversões-----
+        // Para desafio pessoal e treino de loops não vou usar as funções parseInt e toString
+
+        // Pra acessar cada posição equivalente na conversão base 16
+        const digitosPossiveis = "0123456789ABCDEF";
+
+        // Função para converter do decimal pra qualquer base
+        function converterDecimalParaBase(numeroDigitado, baseDigitada) {
+            // Criar uma variável vazia pra ir guardando os restos das divisões
+            let resultado = "";
+            // Transformar entradas da função em números p operações
+            let decimal = Number(numeroDigitado);
+            let base = Number(baseDigitada);
+
+            // Faz o mais simples antes
+            if (decimal == 0) {
+                return "0";
+            }
+
+            // Repita a operação até que o numero seja 0
+            while (decimal > 0) {
+
+                // Fazer a divisão do número pela base (2)
+                let resto = decimal % base;
+                // Também não vou usar o math floor pra arredondar pra baixo
+                decimal = (decimal - resto) / base;
+
+                // Usar o resto como índice e dizer qual o caracter equivalente
+                resultado = digitosPossiveis[resto] + resultado;
+
+            }
+
+            return resultado;
+        }
+
+        // Função para converter qualquer base para o decimal
+        function converterBaseParaDecimal(numeroDigitado, baseOriginal) {
+            // Inicializar a variável que vai guardar o resultado
+            let decimal = 0;
+            // Inicializa em 0 pq é a primeira potência a ser utilizada
+            let potencia = 0;
+
+            // Transforma tudo em maiúsculo pra não dar erro com letras min na entrada
+            let numeroTexto = String(numeroDigitado).toUpperCase();
+
+            // Loop que começa na última letra do valor q foi digitado e vai indo pra trás até a primeira letra
+            // O contador i começa valendo o indíce do último caractere
+            for (let i = numeroTexto.length - 1; i >= 0; i--) {
+
+                // Pegar o caractere específico da vez usando o contador como índice
+                let caractere = numeroTexto[i];
+
+                // Localiza qual o índice desse caractere específico, consequentemente o valor decimal do caractere
+                let valor = digitosPossiveis.indexOf(caractere);
+
+                // Como a potencia também vai ser incrementado no final, sempre vai calculando com o valor posicional
+                // ** Pra elevar pela potência
+                let calculoDoValor = valor * (baseOriginal ** potencia);
+
+                decimal = decimal + calculoDoValor;
+
+                // Incrementar pro proximo loop
+                potencia = potencia + 1;
+
+            }
+            return decimal;
+        }
+
+        // Função pra converter (A que é chamada ao apertar o botão)
+        // A lógica é primeiro converter a base pra decimal e do decimal fazer a conversão pra outras bases
+        function converter() {
+            // Criar variáveis e pegar as caixinhas do html
+            const iptBinario = document.getElementById('ipt_binario');
+            const iptOctal = document.getElementById('ipt_octal');
+            const iptDecimal = document.getElementById('ipt_decimal');
+            const iptHexa = document.getElementById('ipt_hexadecimal');
+
+            let decimalReferente = 0;
+
+            // Entra na condicional se o valor do input específico for diferente de vazio, ou seja, tiver preenchido
+            if (iptBinario.value !== "") {
+                decimalReferente = converterBaseParaDecimal(iptBinario.value, 2);
+
+            } else if (iptOctal.value !== "") {
+                decimalReferente = converterBaseParaDecimal(iptOctal.value, 8);
+
+            } else if (iptDecimal.value !== "") {
+                decimalReferente = Number(iptDecimal.value);
+
+            } else if (iptHexa.value !== "") {
+                decimalReferente = converterBaseParaDecimal(iptHexa.value, 16);
+
+            } else {
+                // Se só apertar o botão sem digitar nada
+                alert("Digite um número em algum campo antes de apertar pra converter");
+                return;
+            }
+
+            iptBinario.value = converterDecimalParaBase(decimalReferente, 2);
+            iptOctal.value = converterDecimalParaBase(decimalReferente, 8);
+            iptDecimal.value = converterDecimalParaBase(decimalReferente, 10);
+            iptHexa.value = converterDecimalParaBase(decimalReferente, 16);
+        }
+
+        // Função para o botão Limpar
+        function limparInputs() {
+            // Pegar as caixinhas do HTML
+            const iptBinario = document.getElementById('ipt_binario');
+            const iptOctal = document.getElementById('ipt_octal');
+            const iptDecimal = document.getElementById('ipt_decimal');
+            const iptHexa = document.getElementById('ipt_hexadecimal');
+
+            // Limpar o valor delas
+            iptBinario.value = '';
+            iptOctal.value = '';
+            iptDecimal.value = '';
+            iptHexa.value = '';
+        }
+
+    </script>
+
+</body>
+
+</html>
