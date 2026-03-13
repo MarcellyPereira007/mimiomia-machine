@@ -27,7 +27,7 @@ Para treinar lógica, repetição (loops) e manipulação de strings, o algoritm
 * **HTML5 semântico**
 * **CSS3**
 * **JavaScript Vanilla** (Puro, sem frameworks)
-* [**98.css**](https://jdan.github.io/98.css/) - Uma biblioteca legal que imita perfeitamente as janelas do Windows 98
+* [**98.css**](https://jdan.github.io/98.css/) - Uma biblioteca legal que imita perfeitamente as janelas do Windows 98 *(Copyright (c) 2020 Jordan Scales - Licença MIT)*
 * [**Filtro CRT**](https://aleclownes.com/2017/02/01/crt-display.html) - CSS customizado para simular "scanlines" de monitores de tubo antigos
 
 ---
