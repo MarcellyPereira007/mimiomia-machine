@@ -140,11 +140,14 @@
                             <div class="window-body">
                                 <menu role="tablist">
                                     <li role="tab" aria-selected="true" style="font-size:14px;"><a href="#tab-oque">O
-                                            que
-                                            é?</a>
+                                            que é?</a>
                                     </li>
+
                                     <li role="tab" style="font-size:14px;"><a href="#tab-conversor">Conversor de
                                             bases</a>
+                                    </li>
+
+                                    <li role="tab" style="font-size:14px;"><a href="#tab-calculadora">Calculadora</a>
                                     </li>
                                 </menu>
                                 <div class="window" role="tabpanel" id="tab-oque">
@@ -174,16 +177,17 @@
                                     </div>
                                 </div>
 
+                                <!--Div conteúdo do conversor-->
                                 <div class="window" role="tabpanel" id="tab-conversor" hidden>
                                     <div class="window-body">
                                         <p style="font-size: 14px;">Digite o número dentro de um campo e clique em
                                             converter pra ver a magia acontecer</p>
-                                        <div class="inputs">
+                                        <div class="inputs_conversor">
 
                                             <!--Input para base 2-->
                                             <div class="field-row-stacked" style="width: 120px">
                                                 <label for="ipt_binario"">Binário (Base 2)</label>
-                                            <input id="ipt_binario" type="text" placeholder="Ex: 1101" />
+                                            <input id=" ipt_binario" type="text" placeholder="Ex: 1101" />
                                             </div>
 
                                             <!--Input para base 8-->
@@ -208,25 +212,85 @@
 
                                         <div class="botoes">
                                             <div id="btn_converter">
-                                                <button class="default" onclick="converter()";>Converter</button>
+                                                <button class="default" onclick="converter()">Converter</button>
                                             </div>
 
                                             <div id="btn_limpar_inputs">
-                                                <button class="default" onclick="limparInputs()";>Limpar</button>
+                                                <button class="default" onclick="limparInputs()">Limpar</button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
 
+                                <div class="window" role="tabpanel" id="tab-calculadora" hidden>
+                                    <div class="window-body">
+                                        <p style="font-size: 14px;">Selecione as bases e digite os valores nos campos
+                                            indicados. Escolha uma operação a ser feita e receba o resultado.</p>
+                                        <div class="inputs_calc">
+
+                                            <!--Divs dos campos preenchiveis-->
+                                            <!--Div do campo 1-->
+                                            <div class="field-row">
+                                                <input id="campo1_calc" type="text" />
+                                                <select id="base_campo1">
+                                                    <option value="0" selected>Base</option>
+                                                    <option value="2">Base 2</option>
+                                                    <option value="8">Base 8</option>
+                                                    <option value="10">Base 10</option>
+                                                    <option value="16">Base 16</option>
+                                                </select>
+                                            </div>
+
+                                            <!--Div seleção de operação-->
+                                            <div class="div_operacao">
+                                                <select id="operacao_calc">
+                                                    <option value="0" selected>Selecione uma operação</option>
+                                                    <option value="1">1- Soma</option>
+                                                    <option value="2">2 - Subtração</option>
+                                                    <option value="3">3 - Multiplicação</option>
+                                                    <option value="4">4 - Divisão</option>
+                                                </select>
+                                            </div>
+
+                                            <!--Div do campo 2-->
+                                            <div class="field-row">
+                                                <input id="campo2_calc" type="text" />
+                                                <select id="base_campo2">
+                                                    <option value="0" selected>Base</option>
+                                                    <option value="2">Base 2</option>
+                                                    <option value="8">Base 8</option>
+                                                    <option value="10">Base 10</option>
+                                                    <option value="16">Base 16</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="botoes">
+                                        <div id="btn_calcular">
+                                            <button class="default" onclick="calcular()" ;>Calcular</button>
+                                        </div>
+
+                                        <div id="btn_limpar_inputs_calc">
+                                            <button class="default" onclick="limparInputsCalc()" ;>Limpar</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="field-border-disabled" id="div_resultado_decimal" style="padding: 5px" hidden>
+                                    </div>
+
+                                </div>
                             </div>
+
                         </div>
-
                     </div>
+
                 </div>
-
-
-            </main>
         </div>
+
+
+        </main>
+    </div>
 
     </div>
 
@@ -369,7 +433,7 @@
             iptHexa.value = converterDecimalParaBase(decimalReferente, 16);
         }
 
-        // Função para o botão Limpar
+        // Função para o botão Limpar inputs da tela de converter
         function limparInputs() {
             // Pegar as caixinhas do HTML
             const iptBinario = document.getElementById('ipt_binario');
@@ -384,8 +448,76 @@
             iptHexa.value = '';
         }
 
-    </script>
+        // -----Lógica da aba de calculadora-----
 
+        function calcular() {
+            // Pegar os valores que coloquei nas caixas
+            const valor1 = document.getElementById('campo1_calc').value;
+            const base1 = Number(document.getElementById('base_campo1').value);
+
+            const valor2 = document.getElementById('campo2_calc').value;
+            const base2 = Number(document.getElementById('base_campo2').value);
+
+            const operacao = document.getElementById('operacao_calc').value;
+
+            // Ver se ta tudo preenchido
+            if (valor1 == "" || valor2 == "" || base1 == 0 || base2 == 0 || operacao == "0") {
+                alert("Por favor, preencha todos os campos, bases e selecione uma operação.");
+                return; // ja para de executar a função
+            }
+
+            // Usar funcão pra converter usando o valor selecionado como parametro
+            let decimal1 = converterBaseParaDecimal(valor1, base1);
+            let decimal2 = converterBaseParaDecimal(valor2, base2);
+
+            let resultadoDecimal = 0;
+
+            // usa o switch case pra ficar mais limpo a escolha do "menu"
+            switch (operacao) {
+                case "1": // soma
+                    resultadoDecimal = decimal1 + decimal2;
+                    break;
+                case "2": // subtração
+                    resultadoDecimal = decimal1 - decimal2;
+                    break;
+                case "3": // multiplicação
+                    resultadoDecimal = decimal1 * decimal2;
+                    break;
+                case "4": // divisão
+                    // Verificar se o divisor é zero
+                    if (decimal2 === 0) {
+                        alert("Não é possível dividir por 0");
+                        return;
+                    } else {
+                        resultadoDecimal = decimal1 / decimal2;
+                    }
+                    break;
+            }
+
+            div_resultado_decimal.innerHTML = `O resultado em decimal é: ${resultadoDecimal}`;
+            div_resultado_decimal.removeAttribute('hidden');
+        }
+
+        //limpa inputs e resultado
+        function limparInputsCalc() {
+            // Pegar as caixinhas do HTML
+            const iptCampo1 = document.getElementById('campo1_calc');
+            const iptCampo2 = document.getElementById('campo2_calc');
+            const iptBase1 = document.getElementById('base_campo1');
+            const iptBase2 = document.getElementById('base_campo2');
+            const iptOperacao = document.getElementById('operacao_calc');
+
+            // Limpar o valor delas
+            iptCampo1.value = '';
+            iptCampo2.value = '';
+            iptOperacao.value = 0;
+            iptBase1.value = 0;
+            iptBase2.value = 0;
+            div_resultado_decimal.setAttribute('hidden','true');
+        }
+
+
+    </script>
 </body>
 
 </html>

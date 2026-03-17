@@ -180,7 +180,7 @@ nav {
 }
 
 /*Pega a div que os inputs estão dentro (div mãe) pela classe */
-.inputs {
+.inputs_conversor {
     display: flex;
     justify-content: center; /* Centraliza na horizontal */
     gap: 15px; /* Espacinho entre um e outro */
@@ -200,4 +200,44 @@ nav {
     justify-content: center;
     margin: 20px; 
     gap: 15px;
+}
+
+.inputs_calc {
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+    justify-content: center;
+    margin-top: 20px; /* Espaço da frase de cima */
+}
+
+.inputs_calc input {
+    width: 120%;
+    font-size: 14px;
+}
+
+.field-row{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    align-items: flex-end;
+}
+
+.field-row select{
+    width: 70%;
+}
+
+.div_operacao {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#div_resultado_decimal {
+    width: 50%;
+    margin: 0 auto;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 16px;
+    text-align: center;
 }
