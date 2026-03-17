@@ -17,6 +17,10 @@ O coração desse site é a **mimiomia's Machine**, uma adaptação da *SPtecher
 * Decimal (Base 10)
 * Hexadecimal (Base 16)
 
+## Calculadora entre bases
+
+Realiza operações básicas entre números de bases diferentes
+
 **Desafio:**
 Para treinar lógica, repetição (loops) e manipulação de strings, o algoritmo de conversão foi construído **100% do zero** e na unha. Não foram utilizadas funções nativas facilitadoras como `parseInt()` ou `.toString(base)`. Toda a matemática de restos de divisão e elevação de potências acontece nas funções criadas
 

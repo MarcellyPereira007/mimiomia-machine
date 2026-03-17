@@ -7,13 +7,16 @@ Este projeto está em evolução. Veja o que já fiz e o que pretendo fazer
 - [x] **Interface nostálgica:** Estruturação do layout em abas interativas utilizando a biblioteca 98.css
 - [x] **Efeito CRT:** Implementação de um filtro CSS customizado pra simular scanlines de monitores de tubo
 
+## O que já foi feito (Versão 1.1)
+- [x] **Calculadora:** Criação da aba "Calculadora" na mimiomia's Machine
+- [x] **Operações básicas:** Funcionalidade de realizar operações matemáticas (+, -, *, /) entre as bases
+
 ---
 
 ## Conteúdo
 - [ ] **Resumos interativos:** Subir meus resumos da disciplina pra me conectar melhor com o conteúdo e ter um lugar centralizado e personalizado com as minhas anotações
 
 ## Evolução da machine (Calculadora)
-- [ ] **Operações básicas:** Criar uma nova aba pra realizar operações matemáticas (+, -, *, /) entre as bases
 - [ ] **Resultado simultâneo:** Exibir o resultado da operação já convertido automaticamente para todas as outras bases
 
 ## Refatoração e boas práticas
